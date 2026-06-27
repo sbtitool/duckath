@@ -1,0 +1,112 @@
+{
+  "template": "duckmath-clone",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "duck",
+      "logo": {
+        "src": "/imgs/duck.svg",
+        "alt": "duck"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "游戏",
+          "url": "/#games",
+          "icon": "RiSparkling2Line"
+        },
+        {
+          "title": "练习",
+          "url": "/#practice",
+          "icon": "RiBookOpenLine"
+        },
+        {
+          "title": "排行榜",
+          "url": "/#leaderboard",
+          "icon": "RiApps2Line"
+        },
+        {
+          "title": "学习",
+          "url": "/#study",
+          "icon": "RiGraduationCapLine"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "开始游玩",
+        "url": "/#games",
+        "target": "_self",
+        "variant": "default",
+        "icon": "RiArrowRightUpLine"
+      }
+    ],
+    "show_sign": false,
+    "show_theme": false,
+    "show_locale": true
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Duckmath",
+      "subtitle": "Free Unblocked Games Online",
+      "description": "Duckmath.org hosts 250+ browser games, updates daily, and features leaderboards, dabloons, a seasonal battlepass, and multiple integrations so you can play from the school chromebook.",
+      "logo": {
+        "src": "/imgs/duck.svg",
+        "alt": "duck"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2026 Duckmath. All rights reserved. v1.1.12",
+    "social": {
+      "items": [
+        { "title": "TikTok", "url": "#", "icon": "RiTiktokLine" },
+        { "title": "Discord", "url": "#", "icon": "RiDiscordLine" },
+        { "title": "Instagram", "url": "#", "icon": "RiInstagramLine" },
+        { "title": "YouTube", "url": "#", "icon": "RiYoutubeLine" },
+        { "title": "LinkedIn", "url": "#", "icon": "RiLinkedinLine" }
+      ]
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "页面",
+          "children": [
+            { "title": "首页", "url": "/", "target": "_self", "icon": "🏠" },
+            { "title": "关于我们", "url": "/about", "target": "_self", "icon": "ℹ️" },
+            { "title": "博客", "url": "/blog", "target": "_self", "icon": "📝" }
+          ]
+        },
+        {
+          "title": "功能",
+          "children": [
+            { "title": "排行榜", "url": "/leaderboard", "target": "_self", "icon": "🏆" },
+            { "title": "连胜", "url": "/streak", "target": "_self", "icon": "🔥" },
+            { "title": "个人资料", "url": "/profile", "target": "_self", "icon": "👤" },
+            { "title": "设置", "url": "/settings", "target": "_self", "icon": "⚙️" },
+            { "title": "上传", "url": "/upload", "target": "_self", "icon": "📤" },
+            { "title": "滚动动态", "url": "/scroll-feed", "target": "_self", "icon": "📜" }
+          ]
+        },
+        {
+          "title": "支持",
+          "children": [
+            { "title": "联系我们", "url": "mailto:support@duckmath.org", "target": "_self", "icon": "📧" },
+            { "title": "Duck池塘", "url": "#", "target": "_blank", "icon": "💬" },
+            { "title": "友链", "url": "/links", "target": "_self", "icon": "🔗" }
+          ]
+        },
+        {
+          "title": "法律",
+          "children": [
+            { "title": "服务条款", "url": "/terms", "target": "_self", "icon": "📜" },
+            { "title": "隐私政策", "url": "/privacy", "target": "_self", "icon": "🔒" },
+            { "title": "DMCA 下架", "url": "/takedown", "target": "_self", "icon": "⚖️" }
+          ]
+        }
+      ]
+    }
+  }
+}

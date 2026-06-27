@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+@plugin "tailwindcss-animate";
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    background-color: var(--duck-page-green);
+    background-image:
+      url("/imgs/backgrounds/emeralds.svg"),
+      radial-gradient(circle at 18% 20%, rgba(232, 245, 233, 0.28) 0 9%, transparent 10%),
+      radial-gradient(circle at 86% 14%, rgba(63, 182, 131, 0.3) 0 12%, transparent 13%),
+      radial-gradient(circle at 70% 72%, rgba(29, 44, 19, 0.2) 0 12%, transparent 13%),
+      linear-gradient(135deg, rgba(135, 220, 131, 0.95), rgba(74, 157, 79, 0.88));
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover, 460px 460px, 560px 560px, 620px 620px, cover;
+  }
+
+  a {
+    color: #348fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #ffffff;
+  }
+}
+
+.container {
+  @apply mx-auto max-w-7xl px-4 md:px-8;
+}
+
+input,
+select,
+textarea {
+  @apply border-border outline-ring/50 bg-background;
+}
+
+button {
+  @apply cursor-pointer border-border outline-ring/50;
+}
+
+pre {
+  @apply px-4;
+}
+
+::selection {
+  background: var(--duck-emerald-light);
+  color: var(--duck-bg-primary);
+}
+
+.duck-panel {
+  @apply border shadow-lg;
+  background: linear-gradient(
+    145deg,
+    rgba(54, 79, 37, 0.95),
+    rgba(29, 44, 19, 0.96)
+  );
+  border-color: rgba(93, 129, 81, 0.75);
+  box-shadow: 0 24px 70px rgba(13, 20, 9, 0.35);
+  backdrop-filter: blur(16px);
+}
+
+.duck-card {
+  @apply border transition-all duration-300;
+  background: linear-gradient(
+    145deg,
+    rgba(42, 63, 28, 0.95),
+    rgba(29, 44, 19, 0.96)
+  );
+  border-color: rgba(93, 129, 81, 0.72);
+  box-shadow: 0 18px 48px rgba(13, 20, 9, 0.28);
+}
+
+.duck-card:hover {
+  border-color: var(--duck-emerald-light);
+  box-shadow: 0 24px 70px rgba(13, 20, 9, 0.38);
+  transform: translateY(-4px);
+}

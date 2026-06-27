@@ -1,0 +1,112 @@
+{
+  "template": "duckmath-clone",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "duck",
+      "logo": {
+        "src": "/imgs/duck.svg",
+        "alt": "duck"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Games",
+          "url": "/#games",
+          "icon": "RiSparkling2Line"
+        },
+        {
+          "title": "Practice",
+          "url": "/#practice",
+          "icon": "RiBookOpenLine"
+        },
+        {
+          "title": "Leaderboard",
+          "url": "/#leaderboard",
+          "icon": "RiApps2Line"
+        },
+        {
+          "title": "Study",
+          "url": "/#study",
+          "icon": "RiGraduationCapLine"
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Start Playing",
+        "url": "/#games",
+        "target": "_self",
+        "variant": "default",
+        "icon": "RiArrowRightUpLine"
+      }
+    ],
+    "show_sign": false,
+    "show_theme": false,
+    "show_locale": true
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Duckmath",
+      "subtitle": "Free Unblocked Games Online",
+      "description": "Duckmath.org hosts 250+ browser games, updates daily, and features leaderboards, dabloons, a seasonal battlepass, and multiple integrations so you can play from the school chromebook.",
+      "logo": {
+        "src": "/imgs/duck.svg",
+        "alt": "duck"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2026 Duckmath. All rights reserved. v1.1.12",
+    "social": {
+      "items": [
+        { "title": "TikTok", "url": "#", "icon": "RiTiktokLine" },
+        { "title": "Discord", "url": "#", "icon": "RiDiscordLine" },
+        { "title": "Instagram", "url": "#", "icon": "RiInstagramLine" },
+        { "title": "YouTube", "url": "#", "icon": "RiYoutubeLine" },
+        { "title": "LinkedIn", "url": "#", "icon": "RiLinkedinLine" }
+      ]
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Pages",
+          "children": [
+            { "title": "Home", "url": "/", "target": "_self", "icon": "🏠" },
+            { "title": "About", "url": "/about", "target": "_self", "icon": "ℹ️" },
+            { "title": "Blog", "url": "/blog", "target": "_self", "icon": "📝" }
+          ]
+        },
+        {
+          "title": "Features",
+          "children": [
+            { "title": "Leaderboard", "url": "/leaderboard", "target": "_self", "icon": "🏆" },
+            { "title": "Streak", "url": "/streak", "target": "_self", "icon": "🔥" },
+            { "title": "Profile", "url": "/profile", "target": "_self", "icon": "👤" },
+            { "title": "Settings", "url": "/settings", "target": "_self", "icon": "⚙️" },
+            { "title": "Upload", "url": "/upload", "target": "_self", "icon": "📤" },
+            { "title": "Scroll Feed", "url": "/scroll-feed", "target": "_self", "icon": "📜" }
+          ]
+        },
+        {
+          "title": "Support",
+          "children": [
+            { "title": "Contact Us", "url": "mailto:support@duckmath.org", "target": "_self", "icon": "📧" },
+            { "title": "The Duck Pond", "url": "#", "target": "_blank", "icon": "💬" },
+            { "title": "Links", "url": "/links", "target": "_self", "icon": "🔗" }
+          ]
+        },
+        {
+          "title": "Legal",
+          "children": [
+            { "title": "Terms of Service", "url": "/terms", "target": "_self", "icon": "📜" },
+            { "title": "Privacy Policy", "url": "/privacy", "target": "_self", "icon": "🔒" },
+            { "title": "DMCA Takedown", "url": "/takedown", "target": "_self", "icon": "⚖️" }
+          ]
+        }
+      ]
+    }
+  }
+}
