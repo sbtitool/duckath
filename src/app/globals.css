@@ -16,16 +16,11 @@
     @apply bg-background text-foreground;
     min-height: 100vh;
     font-family: var(--font-sans);
-    background-color: var(--duck-page-green);
-    background-image:
-      url("/imgs/backgrounds/emeralds.svg"),
-      radial-gradient(circle at 18% 20%, rgba(232, 245, 233, 0.28) 0 9%, transparent 10%),
-      radial-gradient(circle at 86% 14%, rgba(63, 182, 131, 0.3) 0 12%, transparent 13%),
-      radial-gradient(circle at 70% 72%, rgba(29, 44, 19, 0.2) 0 12%, transparent 13%),
-      linear-gradient(135deg, rgba(135, 220, 131, 0.95), rgba(74, 157, 79, 0.88));
+    background-color: var(--duck-page-green) !important;
+    background-image: url("/imgs/backgrounds/emeralds.svg") !important;
     background-attachment: fixed;
     background-position: center;
-    background-size: cover, 460px 460px, 560px 560px, 620px 620px, cover;
+    background-size: cover;
   }
 
   a {

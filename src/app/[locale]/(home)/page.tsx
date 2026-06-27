@@ -38,7 +38,7 @@ export default function LandingPage() {
   const homeGames = getHomeGames();
 
   return (
-    <main className="min-h-screen bg-[#80D893] p-2 lg:p-4">
+    <main className="min-h-screen p-2 lg:p-4">
       <div className="mx-auto grid grid-flow-dense grid-cols-[repeat(auto-fill,120px)] auto-rows-[120px] gap-[10px] justify-center pb-10">
 
         {/* Navigation & Ad Column - Blends into grid but stays vertical */}
@@ -70,7 +70,7 @@ export default function LandingPage() {
           </div>
 
           {/* Ad Placeholder */}
-          <div className="flex flex-1 flex-col items-center justify-between rounded-lg bg-black p-4 text-center text-white">
+          <div className="flex flex-1 flex-col items-center justify-between rounded-[8px] bg-black p-4 text-center text-white">
             <div className="text-sm font-black tracking-widest text-white/90">
               DUCKMATH
             </div>

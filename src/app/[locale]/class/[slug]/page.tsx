@@ -43,7 +43,7 @@ export default async function GamePage({
   const title = game?.title || slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
   return (
-    <main className="min-h-screen bg-[#80D893] p-2 lg:p-4">
+    <main className="min-h-screen p-2 lg:p-4">
       <div className="mx-auto flex max-w-[1600px] flex-col gap-4 lg:flex-row lg:items-start lg:justify-center">
 
         {/* LEFT SIDEBAR */}
@@ -63,7 +63,7 @@ export default async function GamePage({
             </div>
           </div>
 
-          <div className="flex h-[360px] flex-col items-center justify-between rounded-lg bg-black p-4 text-center text-white">
+          <div className="flex h-[360px] flex-col items-center justify-between rounded-[8px] bg-black p-4 text-center text-white">
             <div className="text-sm font-black tracking-widest text-white/90">DUCKMATH</div>
             <div className="flex flex-col items-center">
               <div className="mb-1 text-3xl text-red-500">↓</div>
@@ -76,14 +76,14 @@ export default async function GamePage({
 
         {/* MAIN GAME AREA */}
         <div className="flex flex-1 flex-col gap-4">
-          <div className="overflow-hidden rounded-xl bg-white shadow-sm">
+          <div className="overflow-hidden rounded-[8px] bg-white shadow-sm">
             <GameIframe game={game} />
             <GameInfoBar game={game} />
           </div>
 
           {/* Game Description - SEO visible */}
           {game && (
-            <div className="rounded-xl bg-white p-4 lg:p-6">
+            <div className="rounded-[8px] bg-white p-4 lg:p-6">
               <h2 className="mb-2 text-lg font-bold text-gray-900">{title}</h2>
               <p className="text-sm leading-relaxed text-gray-600">{game.description}</p>
               {game.instructions && (
@@ -105,9 +105,9 @@ export default async function GamePage({
           )}
 
           {/* Ad Placeholder */}
-          <div className="rounded-xl bg-[#9ae8aa] p-4 text-center">
+          <div className="rounded-[8px] bg-[#9ae8aa] p-4 text-center">
             <span className="text-xs font-bold tracking-widest text-green-800/60">ADVERTISEMENT</span>
-            <div className="mt-2 h-[90px] w-full rounded-lg bg-white/50 border border-green-700/10 flex items-center justify-center">
+            <div className="mt-2 h-[90px] w-full rounded-[8px] bg-white/50 border border-green-700/10 flex items-center justify-center">
               <span className="text-sm text-green-900/50">Banner Ad</span>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default async function GamePage({
 
         {/* RIGHT SIDEBAR */}
         <div className="flex w-full shrink-0 flex-col gap-4 lg:w-[280px]">
-          <div className="flex justify-between items-center rounded-lg bg-black/10 px-4 py-2">
+          <div className="flex justify-between items-center rounded-[8px] bg-black/10 px-4 py-2">
             <span className="text-sm font-bold text-green-900">MORE {game?.category?.toUpperCase() || "GAMES"}</span>
           </div>
           <div className="grid grid-cols-2 gap-[10px]">

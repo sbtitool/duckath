@@ -43,7 +43,7 @@ export default async function RootLayout({
           ))}
         <link rel="alternate" hrefLang="x-default" href={webUrl} />
       </head>
-      <body>{children}</body>
+      <body className="bg-[#80D893] bg-[url('/imgs/backgrounds/emeralds.svg')]">{children}</body>
     </html>
   );
 }

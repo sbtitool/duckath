@@ -41,22 +41,27 @@ export default function GameIframe({ game }: { game: GameItem | null }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="relative w-full" style={{ aspectRatio: `${game.width}/${game.height}` }}>
-        <iframe
-          ref={iframeRef}
-          src={game.url}
-          className="absolute inset-0 h-full w-full border-0"
-          allowFullScreen
-          allow="fullscreen; autoplay"
-          sandbox="allow-scripts allow-same-origin allow-popups"
-          title={game.title}
-          loading="lazy"
-        />
-        <div className="sr-only">
-          <p>{game.description}</p>
-          <p>Category: {game.category}</p>
-          <p>Tags: {game.tags}</p>
-          <p>How to play: {game.instructions}</p>
+      <div className="flex w-full items-center justify-center bg-black">
+        <div 
+          className="relative w-full max-w-[800px]" 
+          style={{ aspectRatio: "4/3" }}
+        >
+          <iframe
+            ref={iframeRef}
+            src={game.url}
+            className="absolute inset-0 h-full w-full border-0"
+            allowFullScreen
+            allow="fullscreen; autoplay"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            title={game.title}
+            loading="lazy"
+          />
+          <div className="sr-only">
+            <p>{game.description}</p>
+            <p>Category: {game.category}</p>
+            <p>Tags: {game.tags}</p>
+            <p>How to play: {game.instructions}</p>
+          </div>
         </div>
       </div>
     </>

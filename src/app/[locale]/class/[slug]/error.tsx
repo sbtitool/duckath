@@ -8,7 +8,7 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <main className="min-h-screen bg-[#80D893] p-2 lg:p-4">
+    <main className="min-h-screen p-2 lg:p-4">
       <div className="mx-auto flex max-w-[1600px] flex-col items-center justify-center py-20">
         <div className="rounded-xl bg-white p-8 text-center shadow-sm">
           <h2 className="text-xl font-bold text-gray-900">Something went wrong</h2>

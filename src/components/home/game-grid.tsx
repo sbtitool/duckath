@@ -22,6 +22,51 @@ type GameGridProps = {
   pageSize?: number;
 };
 
+function GameCard({ game }: { game: HomeGame }) {
+  const [imgError, setImgError] = useState(false);
+
+  const content = (
+    <article
+      className={`group relative overflow-hidden rounded-[8px] transition-transform duration-150 hover:scale-[1.01] [contain:layout_paint_style] [content-visibility:auto] [contain-intrinsic-size:120px_120px] bg-black/5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.1),0_1px_1px_rgba(255,255,255,0.1)] h-full`}
+    >
+      {game.image?.src && !imgError ? (
+        <Image
+          src={game.image.src}
+          alt={game.image.alt || game.title}
+          fill
+          sizes="(min-width: 1024px) 380px, 250px"
+          className="object-cover text-transparent"
+          onError={() => setImgError(true)}
+        />
+      ) : (
+        null
+      )}
+
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/35 p-2 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
+        <span className="text-center text-sm font-bold text-white drop-shadow-md lg:text-base">
+          {game.title}
+        </span>
+        <button
+          type="button"
+          className="mt-2 rounded-full bg-white/25 px-3 py-1 text-xs font-bold text-white transition-colors hover:bg-white/40"
+        >
+          PLAY
+        </button>
+      </div>
+    </article>
+  );
+
+  if (game.href) {
+    return (
+      <Link href={game.href} className={`block w-full h-full ${game.spanClass}`}>
+        {content}
+      </Link>
+    );
+  }
+
+  return <div className={`block w-full h-full ${game.spanClass}`}>{content}</div>;
+}
+
 export default function GameGrid({
   games,
   initialCount = 48,
@@ -73,54 +118,9 @@ export default function GameGrid({
 
   return (
     <>
-      {visibleGames.map((game) => {
-        const content = (
-          <article
-            className={`group relative overflow-hidden rounded-lg shadow-sm transition-transform duration-150 hover:scale-[1.01] hover:shadow-md [contain:layout_paint_style] [content-visibility:auto] [contain-intrinsic-size:120px_120px] ${game.bgColor} h-full`}
-          >
-            {game.image?.src ? (
-              <Image
-                src={game.image.src}
-                alt={game.image.alt || game.title}
-                fill
-                sizes="(min-width: 1024px) 380px, 250px"
-                className="object-cover"
-              />
-            ) : (
-              <>
-                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-2xl font-black text-white/50 mix-blend-overlay">
-                    {game.id + 1}
-                  </span>
-                </div>
-              </>
-            )}
-
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/35 p-2 opacity-0 transition-opacity duration-150 group-hover:opacity-100">
-              <span className="text-center text-sm font-bold text-white drop-shadow-md lg:text-base">
-                {game.title}
-              </span>
-              <button
-                type="button"
-                className="mt-2 rounded-full bg-white/25 px-3 py-1 text-xs font-bold text-white transition-colors hover:bg-white/40"
-              >
-                PLAY
-              </button>
-            </div>
-          </article>
-        );
-
-        if (game.href) {
-          return (
-            <Link key={game.id} href={game.href} className={`block w-full h-full ${game.spanClass}`}>
-              {content}
-            </Link>
-          );
-        }
-
-        return <div key={game.id} className={`block w-full h-full ${game.spanClass}`}>{content}</div>;
-      })}
+      {visibleGames.map((game) => (
+        <GameCard key={game.id} game={game} />
+      ))}
 
       {visibleCount < games.length && (
         <div
