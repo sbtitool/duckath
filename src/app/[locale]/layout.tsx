@@ -3,9 +3,7 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server";
-import { AppContextProvider } from "@/contexts/app";
 import { Metadata } from "next";
-import { NextAuthSessionProvider } from "@/auth/session";
 import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/providers/theme";
 
@@ -21,11 +19,11 @@ export async function generateMetadata({
 
   return {
     title: {
-      template: `%s`,
-      default: t("metadata.title") || "",
+      template: `%s | DuckMath`,
+      default: t("metadata.title") || "DuckMath - Free Online Games",
     },
-    description: t("metadata.description") || "",
-    keywords: t("metadata.keywords") || "",
+    description: t("metadata.description") || "Play 600+ free online games instantly in your browser. No download required.",
+    keywords: t("metadata.keywords") || "free online games, browser games, html5 games, unblocked games",
   };
 }
 
@@ -43,11 +41,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <NextAuthSessionProvider>
-        <AppContextProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </AppContextProvider>
-      </NextAuthSessionProvider>
+      <ThemeProvider>{children}</ThemeProvider>
     </NextIntlClientProvider>
   );
 }

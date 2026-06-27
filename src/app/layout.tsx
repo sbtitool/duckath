@@ -28,7 +28,9 @@ export default async function RootLayout({
           <meta name="google-adsense-account" content={googleAdsenseCode} />
         )}
 
-        <link rel="icon" href="/imgs/logo/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://img.gamemonetize.com" />
+        <link rel="preconnect" href="https://html5.gamemonetize.co" />
 
         {locales &&
           locales.map((loc) => (
