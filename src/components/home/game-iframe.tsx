@@ -41,13 +41,14 @@ export default function GameIframe({ game }: { game: GameItem | null }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="flex w-full items-center justify-center bg-black">
+      <div className="flex w-full flex-1 items-center justify-center bg-black min-h-0">
         <div 
-          className="relative w-full max-w-[800px]" 
-          style={{ aspectRatio: "4/3" }}
+          className="relative" 
+          style={{ aspectRatio: "4/3", height: "100%", maxWidth: "min(100%, 800px)" }}
         >
           <iframe
             ref={iframeRef}
+            data-game-iframe
             src={game.url}
             className="absolute inset-0 h-full w-full border-0"
             allowFullScreen

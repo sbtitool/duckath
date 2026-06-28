@@ -39,32 +39,33 @@ export default function LandingPage() {
 
   return (
     <main className="min-h-screen p-2 lg:p-4">
-      <div className="mx-auto grid grid-flow-dense grid-cols-[repeat(auto-fill,120px)] auto-rows-[120px] gap-[10px] justify-center pb-10">
+      <div className="mx-auto max-w-[1420px] grid grid-flow-dense grid-cols-[repeat(auto-fill,120px)] auto-rows-[120px] gap-[10px] justify-center pb-10">
 
         {/* Navigation & Ad Column - Blends into grid but stays vertical */}
         <div className="col-span-1 row-span-4 flex flex-col gap-[10px]">
           {/* Logo & Actions Card (120x120 container) */}
           <div className="flex h-[120px] shrink-0 flex-col overflow-hidden rounded-2xl bg-white shadow-sm">
             {/* Logo Area */}
-            <Link href="/" className="flex flex-1 flex-col items-center justify-center pt-2 hover:opacity-90">
+            <Link href="/" className="flex flex-1 flex-col items-center justify-center hover:opacity-90 min-h-0">
               <Image
                 src="/imgs/duck.svg"
                 alt="Logo"
-                width={40}
-                height={40}
+                width={44}
+                height={44}
+                className="shrink-0"
               />
-              <span className="text-[13px] font-black tracking-tight text-black">
+              <span className="text-[14px] font-black tracking-tight text-black mt-1 leading-none shrink-0">
                 duckmath
               </span>
             </Link>
 
             {/* Action Buttons */}
-            <div className="flex h-10 shrink-0">
+            <div className="flex h-12 shrink-0">
               <button className="flex flex-1 items-center justify-center bg-[#549E5E] text-white transition-colors hover:bg-[#46864F]">
-                <User className="size-5" />
+                <User className="size-6" strokeWidth={3} />
               </button>
               <button className="flex flex-1 items-center justify-center bg-[#4AB27A] text-white transition-colors hover:bg-[#3D9465]">
-                <Search className="size-5" />
+                <Search className="size-6" strokeWidth={3} />
               </button>
             </div>
           </div>
