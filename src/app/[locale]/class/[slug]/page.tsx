@@ -77,7 +77,7 @@ export default async function GamePage({
         </div>
 
         {/* MAIN GAME AREA */}
-        <div className="col-span-full row-span-4 lg:col-span-6 lg:row-span-5 xl:col-span-8 xl:row-span-6 flex flex-col overflow-hidden rounded-[8px] bg-white shadow-sm">
+        <div className="col-span-full row-span-4 lg:col-span-6 lg:row-span-4 xl:col-span-8 xl:row-span-5 flex flex-col overflow-hidden rounded-[8px] bg-white shadow-sm">
           <GameIframe game={game} />
           <GameInfoBar game={game} />
         </div>

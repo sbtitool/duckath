@@ -35,7 +35,7 @@ export default function GameInfoBar({ game }: { game: GameItem | null }) {
   }, []);
 
   return (
-    <div className="flex flex-wrap items-center justify-between gap-4 p-4 lg:p-6">
+    <div className="flex flex-wrap items-center justify-between gap-3 p-3 lg:p-4">
       <div className="flex items-center gap-4">
         <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-blue-100">
           {game?.thumb ? (
