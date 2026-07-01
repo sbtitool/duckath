@@ -50,10 +50,11 @@ function readJsonFile(filename: string): GameItem[] {
 
 function ensureAllGames(): GameItem[] {
   if (_allGames) return _allGames;
+  const main = readJsonFile("main.json");
   const page1 = readJsonFile("data_1.json");
   const page2 = readJsonFile("data_2.json");
   const page3 = readJsonFile("data_3.json");
-  _allGames = [...page1, ...page2, ...page3];
+  _allGames = [...main, ...page1, ...page2, ...page3];
   return _allGames;
 }
 
@@ -67,7 +68,7 @@ function ensureSlugIndex(): Map<string, GameItem> {
   return _slugIndex;
 }
 
-/** Server-side: load games for homepage (first 2 files, slice to 397) */
+/** Server-side: load games for homepage (first 2 files, slice to 397 + PVB featured) */
 export function getHomeGames(): HomeGame[] {
   if (_homeGames) return _homeGames;
 
@@ -75,7 +76,18 @@ export function getHomeGames(): HomeGame[] {
   const page2 = readJsonFile("data_2.json");
   const all = [...page1, ...page2.slice(0, 197)];
 
-  _homeGames = all.map((game, i) => {
+  // Featured game: Plants vs Brainrots at index 0 with large span
+  const pvbGame = ensureAllGames()[0];
+  const featured: HomeGame = {
+    id: -1,
+    title: pvbGame.title,
+    spanClass: "col-span-3 row-span-3",
+    bgColor: "bg-indigo-400",
+    href: `/game/${slugify(pvbGame.title)}`,
+    image: { src: "/imgs/PlantsVsBrainrots-f500x500.webp", alt: "Plants vs Brainrots Unblocked Featured Game" },
+  };
+
+  const mappedGames = all.map((game, i) => {
     const isLarge = LARGE_INDICES.includes(i);
     const isMedium = MEDIUM_INDICES.includes(i);
     let spanClass = "col-span-1 row-span-1";
@@ -87,10 +99,12 @@ export function getHomeGames(): HomeGame[] {
       title: game.title,
       spanClass,
       bgColor: CATEGORY_COLORS[game.category] || "bg-gray-400",
-      href: `/class/${slugify(game.title)}`,
+      href: `/game/${slugify(game.title)}`,
       image: { src: game.thumb, alt: game.title },
     };
   });
+
+  _homeGames = [featured, ...mappedGames];
 
   return _homeGames;
 }

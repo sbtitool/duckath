@@ -54,7 +54,8 @@ export default function GameInfoBar({ game }: { game: GameItem | null }) {
           )}
         </div>
         <div>
-          <h1 className="text-xl font-bold text-gray-900">{game?.title || "Game"}</h1>
+          {/* H2：主 H1 在 page.tsx 描述块中，此处避免双 H1 */}
+          <h2 className="text-xl font-bold text-gray-900">{game?.title || "Game"}</h2>
           <p className="text-sm text-gray-500">{game?.category || "Game"}</p>
         </div>
       </div>

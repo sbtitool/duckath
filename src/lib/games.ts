@@ -1,6 +1,6 @@
 import { GameItem } from "@/types/game";
 
-const DATA_FILES = ["/games/data_1.json", "/games/data_2.json", "/games/data_3.json"];
+const DATA_FILES = ["/games/main.json", "/games/data_1.json", "/games/data_2.json", "/games/data_3.json"];
 
 let allCached: GameItem[] | null = null;
 

@@ -1,5 +1,5 @@
 {
-  "template": "duckmath-clone",
+  "template": "pvb-game-clone",
   "theme": "light",
   "header": {
     "brand": {
@@ -50,16 +50,16 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "Duckmath",
+      "title": "Plants vs Brainrots",
       "subtitle": "Free Unblocked Games Online",
-      "description": "Duckmath.org hosts 250+ browser games, updates daily, and features leaderboards, dabloons, a seasonal battlepass, and multiple integrations so you can play from the school chromebook.",
+      "description": "Plants vs Brainrots Unblocked hosts 600+ free browser games, updated daily. Play the viral Plants vs Brainrots Roblox tower defense game and hundreds of other unblocked games. Works on school chromebook.",
       "logo": {
         "src": "/imgs/duck.svg",
         "alt": "duck"
       },
       "url": "/"
     },
-    "copyright": "© 2026 Duckmath. All rights reserved. v1.1.12",
+    "copyright": "© 2026 Plants vs Brainrots Unblocked. All rights reserved. v1.2.0",
     "social": {
       "items": [
         { "title": "TikTok", "url": "#", "icon": "RiTiktokLine" },
@@ -93,8 +93,8 @@
         {
           "title": "支持",
           "children": [
-            { "title": "联系我们", "url": "mailto:support@duckmath.org", "target": "_self", "icon": "📧" },
-            { "title": "Duck池塘", "url": "#", "target": "_blank", "icon": "💬" },
+            { "title": "联系我们", "url": "mailto:support@plantsvsbrainrots.cc", "target": "_self", "icon": "📧" },
+            { "title": "PVB社区", "url": "#", "target": "_blank", "icon": "💬" },
             { "title": "友链", "url": "/links", "target": "_self", "icon": "🔗" }
           ]
         },

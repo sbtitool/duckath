@@ -32,7 +32,7 @@ function GameCard({ game }: { game: HomeGame }) {
       {game.image?.src && !imgError ? (
         <Image
           src={game.image.src}
-          alt={game.image.alt || game.title}
+          alt={game.image.alt || `${game.title} - Free Game Play Unblocked Online`}
           fill
           sizes="(min-width: 1024px) 380px, 250px"
           className="object-cover text-transparent"

@@ -24,7 +24,13 @@ const nextConfig = {
     ],
   },
   async redirects() {
-    return [];
+    return [
+      {
+        source: "/class/:path*",
+        destination: "/game/:path*",
+        permanent: true,
+      },
+    ];
   },
 };
 

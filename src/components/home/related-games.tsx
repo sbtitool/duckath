@@ -11,7 +11,7 @@ function RelatedGameCard({ game }: { game: GameItem }) {
 
   return (
     <Link
-      href={`/class/${slugify(game.title)}`}
+      href={`/game/${slugify(game.title)}`}
       className="group relative overflow-hidden rounded-[8px] transition-transform duration-150 hover:scale-[1.01] aspect-square bg-black/5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.1),0_1px_1px_rgba(255,255,255,0.1)]"
     >
       {!imgError ? (

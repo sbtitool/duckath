@@ -19,11 +19,11 @@ export async function generateMetadata({
 
   return {
     title: {
-      template: `%s | DuckMath`,
-      default: t("metadata.title") || "DuckMath - Free Online Games",
+      template: `%s | Plants vs Brainrots`,
+      default: t("metadata.title") || "Plants vs Brainrots Unblocked - Play FREE Online Games",
     },
-    description: t("metadata.description") || "Play 600+ free online games instantly in your browser. No download required.",
-    keywords: t("metadata.keywords") || "free online games, browser games, html5 games, unblocked games",
+    description: t("metadata.description") || "Play Plants vs Brainrots unblocked + 600 free online games instantly in your browser. No download required. Action, puzzle, racing, sports games and more.",
+    keywords: t("metadata.keywords") || "plants vs brainrots, plants vs brainrots unblocked, free online games, browser games, html5 games, play games online, no download games",
   };
 }
 
