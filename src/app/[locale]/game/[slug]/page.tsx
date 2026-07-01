@@ -1,4 +1,3 @@
-import { User, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import GameIframe from "@/components/home/game-iframe";
@@ -154,20 +153,7 @@ export default async function GamePage({
                   />
                 </Link>
               </nav>
-              <div className="flex h-12 shrink-0">
-                <button
-                  className="flex flex-1 items-center justify-center bg-[#549E5E] text-white transition-colors hover:bg-[#46864F]"
-                  aria-label="User account"
-                >
-                  <User className="size-6" strokeWidth={3} />
-                </button>
-                <button
-                  className="flex flex-1 items-center justify-center bg-[#4AB27A] text-white transition-colors hover:bg-[#3D9465]"
-                  aria-label="Search games"
-                >
-                  <Search className="size-6" strokeWidth={3} />
-                </button>
-              </div>
+              {/* Action Buttons — removed */}
             </div>
           {/* Sidebar Ad Placeholder */}
             <div className="flex flex-1 flex-col items-center justify-center rounded-[8px] bg-[#9ae8aa] p-3 text-center">
@@ -184,13 +170,7 @@ export default async function GamePage({
             <GameInfoBar game={game} />
           </div>
 
-          {/* Ad Placeholder */}
-          <div className="col-span-full md:row-span-2 lg:col-span-7 xl:col-span-9 flex flex-col items-center justify-center rounded-[8px] bg-[#9ae8aa] p-4 text-center">
-            <span className="text-xs font-bold tracking-widest text-green-800/60">ADVERTISEMENT</span>
-            <div className="mt-2 w-full flex-1 rounded-[8px] bg-white/50 border border-green-700/10 flex items-center justify-center">
-              <AdUnit slot="5687077530" />
-            </div>
-          </div>
+          {/* Ad Placeholder — removed horizontal ad */}
 
           {/* RELATED GAMES */}
           <RelatedGames games={related} />

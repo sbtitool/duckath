@@ -1,4 +1,3 @@
-import { User, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import GameGrid from "@/components/home/game-grid";
@@ -85,21 +84,7 @@ export default function LandingPage() {
                 </Link>
               </nav>
 
-              {/* Action Buttons */}
-              <div className="flex h-12 shrink-0">
-                <button
-                  className="flex flex-1 items-center justify-center bg-[#549E5E] text-white transition-colors hover:bg-[#46864F]"
-                  aria-label="User account"
-                >
-                  <User className="size-6" strokeWidth={3} />
-                </button>
-                <button
-                  className="flex flex-1 items-center justify-center bg-[#4AB27A] text-white transition-colors hover:bg-[#3D9465]"
-                  aria-label="Search games"
-                >
-                  <Search className="size-6" strokeWidth={3} />
-                </button>
-              </div>
+              {/* Action Buttons — removed User & Search */}
             </div>
 
           {/* Sidebar Ad Placeholder */}
